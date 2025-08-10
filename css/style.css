@@ -181,4 +181,53 @@ footer {
     nav ul li {
         margin: 5px 0;
     }
+
+}
+/* 博客文章样式 */
+.blog-post {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.post-meta {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.post-content {
+    line-height: 1.7;
+}
+
+.post-content figure {
+    margin: 1.5rem 0;
+    text-align: center;
+}
+
+.post-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.post-content figcaption {
+    margin-top: 0.5rem;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.post-footer {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.tags {
+    color: #3498db;
 }
