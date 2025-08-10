@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // 文章数据
     const articles = [
         {
             title: "实验",
@@ -17,25 +16,25 @@ document.addEventListener('DOMContentLoaded', function() {
         return;
     }
 
-    postList.innerHTML = ''; // 清空默认内容
+    postList.innerHTML = '';
 
     articles.forEach(article => {
         const articleCard = document.createElement('div');
         articleCard.className = 'post-card';
         articleCard.innerHTML = `
-            <a href="${article.url}" class="post-link">
-                ${article.image ? `<img src="${article.image}" alt="${article.title}" class="post-thumbnail">` : ''}
-                <div class="post-content">
-                    <h3>${article.title}</h3>
-                    <time datetime="${article.date}">${formatDate(article.date)}</time>
-                    <p>${article.description}</p>
+            <div class="post-content">
+                <h3><a href="${article.url}">${article.title}</a></h3>
+                <time datetime="${article.date}">${formatDate(article.date)}</time>
+                <div class="thumbnail-container" onclick="window.location.href='${article.url}'">
+                    <img src="${article.image}" alt="${article.title}" class="post-thumbnail">
                 </div>
-            </a>
+                <p>${article.description}</p>
+                <a href="${article.url}" class="read-more">阅读全文</a>
+            </div>
         `;
         postList.appendChild(articleCard);
     });
 
-    // 日期格式化
     function formatDate(dateString) {
         const date = new Date(dateString);
         return `${date.getFullYear()}年${date.getMonth()+1}月${date.getDate()}日`;
