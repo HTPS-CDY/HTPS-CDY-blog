@@ -1,6 +1,7 @@
 # HTPS-CDY 博客
 
 这是一个简单的静态博客网站，使用HTML、CSS和JavaScript构建。
+项目废弃，完全开源
 
 ## 项目结构
 
@@ -14,3 +15,4 @@
   - `contact.js`: 联系表单脚本
 - `images/`: 图片资源目录
 - `posts/`: 文章目录
+
